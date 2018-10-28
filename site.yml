@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: True
+  roles:
+  - default
+  - nginx
+  - n
+  - python
+  - ruby
+
