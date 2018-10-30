@@ -3,9 +3,9 @@
   become: True
   roles:
   - default
-  - nginx
   - n
   - laravel
-  - python
-  - ruby
+  #- nginx
+  #- python
+  #- ruby
 
