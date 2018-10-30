@@ -5,7 +5,7 @@
 
 - name: install ruby depend package
   apt:
-    name: "{{item}}"
+    name: "{{ item }}"
     state: present
   with_items:
     - autoconf
