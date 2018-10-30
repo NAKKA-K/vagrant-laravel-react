@@ -3,7 +3,7 @@
   apt:
     name: ruby
 
-- name: install ruby depend package
+- name: install ruby depend packages
   apt:
     name: "{{ item }}"
     state: present
