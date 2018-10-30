@@ -1,8 +1,12 @@
 ---
+- name: add php apt repository
+  command: add-apt-repository ppa:ondrej/php
+
 - name: install php & depend packages
   apt:
     name: "{{ item }}"
     state: present
+    update_cache: True
   with_items:
     - php7.2
     - php7.2-common
@@ -13,4 +17,10 @@
     - php7.2-mbstring
     - php7.2-zip
     - php7.2-xml
-    - php7.2-sqlite
+    - php7.2-sqlite3
+
+- name: install composer
+  shell: |
+      curl -sS https://getcomposer.org/installer | php
+      mv composer.phar /usr/local/bin/composer
+      chmod +x /usr/local/bin/composer
